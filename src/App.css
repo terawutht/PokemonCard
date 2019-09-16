@@ -1,0 +1,41 @@
+.flexRow{
+    display: flex;
+    flex-direction: row
+}
+.App{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column
+}
+
+.item{    
+        background-color:lightblue;
+        height: 180px;
+        padding: 15px 0 15px 5px;
+        margin: 10px    
+}
+.progress-bar{
+    border-radius:15px;
+    margin-left:15px;
+    width:400px;
+    height:20px;
+    background-color:#e4e4e4
+}
+.btn-light{
+    padding: 0;
+border: none;
+background: none;
+color:red;
+font-weight: 600;
+font-size:25px;
+
+}
+
+.image-pokemon{
+    width:160px;
+    height: 150px;
+}
