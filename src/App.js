@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import MyPokedex from './pages/MyPokedex'
+import MyPokedex from './pages/MyPokedexPage'
 
 class App extends Component {
   render() {
