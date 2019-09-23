@@ -27,7 +27,7 @@ class MyPokedexPage extends Component {
         return (
             <React.Fragment>
                 <TextHeader
-                    text="My Pokedex" />
+                    text="My Pokedex gg" />
                 <MyPokedex
                     myPokemon={myPokemon}
                     handlerRemoveCard={onRemoveCard} />
