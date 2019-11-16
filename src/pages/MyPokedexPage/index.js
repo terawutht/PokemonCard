@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { removeItem } from '../../actions/index'
 import { connect } from 'react-redux'
 import MyPokedex from '../../components/MyPokedex'
-import TextHeader from '../../components/TextHeader'
-import Footer from '../../components/Footer'
-import ModelPokemon from '../../components/ModelPokemon'
+import HeaderText from '../../components/HeaderText'
+import OpenModalButton from '../../components/OpenModalButton'
+import PokedexListModal from '../../components/PokedexListModal'
 import './MyPokedex.css'
 
 class MyPokedexPage extends Component {
@@ -16,34 +16,38 @@ class MyPokedexPage extends Component {
         }
 
         this.modal = React.createRef();
-        this.cloesModel = React.createRef();
+        this.cloesModal = React.createRef();
+    }
+
+    componentDidMount(){
+
     }
 
     render() {
 
-        let { onRemoveCard, myPokemon } = this.props
-        // { console.log('myPokemon', myPokemon) }
+        let { onRemoveCard, myPokedex } = this.props
+         console.log('this.modal:::', this.modal) 
 
         return (
             <React.Fragment>
-                <TextHeader
-                    text="My Pokedex TEST2" />
+                <HeaderText
+                    valueText="My Pokedex" />
                 <MyPokedex
-                    myPokemon={myPokemon}
-                    handlerRemoveCard={onRemoveCard} />
-                <Footer
-                    handlerClick={() => this.modal.current.style.display = "block"} />
-                <ModelPokemon
-                    refModel={this.modal}
-                    refCloesModel={this.cloesModel}
-                    handlerCloesModel={() => this.modal.current.style.display = "none"} />
+                    myPokedexCard={myPokedex}
+                    removePokedexCard={onRemoveCard} />
+                <OpenModalButton
+                    refModal={this.modal}
+                />
+                <PokedexListModal
+                    refModal={this.modal}
+                    refCloesModal={this.cloesModal} />
             </React.Fragment >
         )
     }
 }
 
 const mapStateToProps = state => {
-    return { myPokemon: state.Card }
+    return { myPokedex: state.Card }
 }
 
 const mapDispatchToProps = dispatch => {

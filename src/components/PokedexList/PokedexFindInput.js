@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FindPokemon = ({
+const PokedexFindInput = ({
     handleFind
 }) => {
     return (
@@ -11,4 +11,4 @@ const FindPokemon = ({
         </>
     )
 }
-export default FindPokemon
+export default PokedexFindInput
